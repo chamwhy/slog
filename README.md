@@ -1,1 +1,2 @@
-![slogo](https://raw.githubusercontent.com/chamwhy/slog/master/img/slogo.png){: width="300" height="300"}
+
+<img src="/img/slogo.png" width="300px" height="300px">
