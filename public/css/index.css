@@ -1,0 +1,51 @@
+.fixed {
+  position: fixed;
+}
+.flex {
+  display: flex;
+}
+.themeColor {
+  background-color: black;
+}
+
+.noselect {
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.pointer {
+  cursor: pointer;
+}
+.noline {
+  text-decoration: none;
+}
+.tiny {
+  width: 2rem;
+}
+.small {
+  width: 3rem;
+}
+.middle {
+  width: 6rem;
+}
+.littlebig {
+  width: 10rem;
+}
+.big {
+  width: 20rem;
+}
+.huge {
+  width: 40rem;
+}
+.right {
+  margin-left: auto;
+}
+a {
+  margin: 1rem;
+}
+.white {
+  color: white;
+}
