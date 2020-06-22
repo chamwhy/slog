@@ -16,6 +16,16 @@
   user-select: none;
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+li {
+  height: 2rem;
+  padding: 1rem;
+}
+
 .pointer {
   cursor: pointer;
 }
@@ -48,4 +58,37 @@ a {
 }
 .white {
   color: white;
+}
+.underbox {
+  border-bottom: 3px solid rgb(240, 240, 240);
+}
+.following {
+  align-items: center;
+  margin: 0;
+}
+.vC {
+  margin-top: 6px;
+}
+li:hover {
+  background-color: rgb(220, 220, 220);
+}
+.rss {
+  border-radius: 20%;
+  background-color: rgb(255, 81, 81);
+  width: 2rem;
+  color: white;
+  height: 2rem;
+  text-align: center;
+  vertical-align: middle;
+  margin-right: 1rem;
+  padding: auto;
+}
+.section {
+  font-size: 10rem;
+  margin-top: 52px;
+  margin-left: 20rem;
+}
+
+#followingUl li ::-webkit-scrollbar {
+  width: 1rem;
 }
