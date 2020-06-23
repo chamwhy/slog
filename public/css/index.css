@@ -92,3 +92,12 @@ li:hover {
 #followingUl li ::-webkit-scrollbar {
   width: 1rem;
 }
+.article {
+  width: 20rem;
+  height: 12rem;
+  background-image: url("../img/defualtUser.png");
+  background-size: 20rem 12rem;
+}
+.explain {
+  align-items: center;
+}
