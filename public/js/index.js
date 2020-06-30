@@ -18,7 +18,11 @@ utils.getUserInfo = () => {
     followings: 34,
     followers: 52,
   };
+  return user;
+  
+};
 
+utils.fillSlider = (user) => {
   const expslider = document.querySelector("#expslider");
   let slider = document.createElement("canvas");
   const ctx = slider.getContext("2d");
@@ -30,5 +34,4 @@ utils.getUserInfo = () => {
   ctx.fillRect(0, 0, (500 / 100) * user.exp, 20);
   expslider.appendChild(slider);
 };
-
-utils.getUserInfo();
+utils.fillSlider(utils.getUserInfo());
