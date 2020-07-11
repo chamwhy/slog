@@ -19,7 +19,6 @@ utils.getUserInfo = () => {
     followers: 52,
   };
   return user;
-  
 };
 
 utils.fillSlider = (user) => {
@@ -34,4 +33,6 @@ utils.fillSlider = (user) => {
   ctx.fillRect(0, 0, (500 / 100) * user.exp, 20);
   expslider.appendChild(slider);
 };
+
+utils.
 utils.fillSlider(utils.getUserInfo());
