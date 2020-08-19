@@ -7,5 +7,6 @@ module.exports = (app, passport) => {
 
   app.post("/userInfo", (req, res) => {
     const data = req.body;
+    
   });
 };

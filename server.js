@@ -19,8 +19,9 @@ const app = express();
 const join = require('path').join;
 const fs = require('fs');
 const passport = require('passport');
+const mongoose = require("mongoose");
 
-const PORT = process.env.PORT || 3000;
+const port = process.env.port || 3000;
 
 require('./config/passport')(passport);
 require('./config/express')(app, passport);
@@ -31,17 +32,25 @@ app.use(express.static(join(__dirname, 'public')));
 app.use(express.json());
 app.use(express.urlencoded( {extended : false } ));
 
-app.get('/', (req, res)=>{
-    res.sendFile(fs.readFileSync('/index.html', 'utf8'));
-});
-
-app.post('/create', (req, res)=>{
-    //블로그 창설 api
-    res.redirect('/');
-}); 
 
 
+connect();
 
-app.listen(PORT, ()=>{
-    console.log('server is open at ' + PORT);
-});
+function listen(){
+    if(app.get("env") == "test") return;
+    app.listen(port);
+    console.log('server is open at ' + port);
+}
+
+
+function connect(){
+    mongoose.connection
+        .on("error", console.log)
+        .on("disconnected", connect)
+        .once("open", listen);
+    return mongoose.connect(config.db, {
+        keepAlive: 1,
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    });
+}

@@ -11,5 +11,5 @@ const github = require('./passport/github');
 
 
 module.exports = (passport) => {
-    local()
+    
 };
